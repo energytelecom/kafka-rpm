@@ -15,6 +15,7 @@ dist:
 	@date > dist.log
 	@rm -rf $(DEST)/$(NAME)-$(VERSION)
 	@mkdir $(DEST)/$(NAME)-$(VERSION)
+	wget -c http://ftp.unicamp.br/pub/apache/kafka/0.8.1.1/kafka_2.9.2-0.8.1.1.tgz
 	@tar -vzxf kafka_2.9.2-0.8.1.1.tgz
 	@mv kafka_2.9.2-0.8.1.1 $(DEST)/$(NAME)-$(VERSION)/kafka
 	@cp -R service/* $(DEST)/$(NAME)-$(VERSION)/

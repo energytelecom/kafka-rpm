@@ -1,6 +1,6 @@
 Name: kafka 
 Version: 0.8.1.1  
-Release: 1%{?dist}  
+Release: 1.2
 Summary: A high-throughput distributed messaging system.    
 Group: Applications/Internet
 License: MIT
@@ -45,6 +45,7 @@ exit 0
 
 # Copy the kafka file to the right places
 %{__mkdir_p} %{buildroot}/usr/lib/kafka
+%{__mkdir_p} %{buildroot}/etc/kafka
 %{__cp} -R kafka/* %{buildroot}/usr/lib/kafka
 
 # Copy the service file to the right places
@@ -54,7 +55,7 @@ exit 0
 %{__mkdir_p} %{buildroot}/var/run/kafka
 
 %{__mv} init.d/kafka-server %{buildroot}/etc/init.d
-%{__mv} env/kafka-env.sh %{buildroot}/etc/kafka/kafka-env.sh
+%{__mv} config/* %{buildroot}/etc/kafka/
 
 %files
 %defattr(-,kafka,kafka,755)
@@ -71,9 +72,12 @@ exit 0
 %preun
 if [ "$1" = "0" ]; then
     /sbin/service kafka-server stop
-    /sbin/chkconfig kafka-server off
+    /sbin/chkconfig --add kafka-server
 fi
 
 %changelog
-* Mon May 5 2014 Kimura Sotaro  0.6.160
+* Fri Mar 06 2015 Cleber Rodrigues <cleber@cleberar.com> 0.8.1.1-1.1
+- first
+
+* Mon May 5 2014 Kimura Sotaro  0.8.1.1-1.1
 - first
