@@ -59,7 +59,7 @@ exit 0
 
 %files
 %defattr(-,kafka,kafka,755)
-/usr/lib/
+/usr/lib/kafka
 %dir /var/log/kafka
 %dir /var/run/kafka
 %defattr(755,root,root)
