@@ -76,7 +76,7 @@ if [ "$1" = "0" ]; then
 fi
 
 %changelog
-* Fri Mar 06 2015 Cleber Rodrigues <cleber@cleberar.com> 0.8.1.1-1.1
+* Fri Mar 06 2015 Cleber Rodrigues <cleber@cleberar.com> 0.8.1.1-1.2
 - first
 
 * Mon May 5 2014 Kimura Sotaro  0.8.1.1-1.1
