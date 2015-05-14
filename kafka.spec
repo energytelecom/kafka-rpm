@@ -1,5 +1,5 @@
 Name: kafka 
-Version: 0.8.2.1  
+Version: 0.8.2.1-0.2
 Release: 1.0
 Summary: A high-throughput distributed messaging system.    
 Group: Applications/Internet
@@ -76,6 +76,9 @@ if [ "$1" = "0" ]; then
 fi
 
 %changelog
+* Thu May 14 2015 Cleber Rodrigues <cleber@cleberar.com> 0.8.2.1-0.2
+- update default config
+
 * Sun Apr 26 2015 Cleber Rodrigues <cleber@cleberar.com> 0.8.2.1-0.1
 - update kafka
 
