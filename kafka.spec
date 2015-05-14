@@ -1,11 +1,11 @@
 Name: kafka 
-Version: 0.8.2.1-0.2
-Release: 1.0
+Version: 0.8.2.1
+Release: 1.1
 Summary: A high-throughput distributed messaging system.    
 Group: Applications/Internet
 License: MIT
 URL: http://kafka.apache.org/
-Source: kafka-%{version}.tbz2
+Source: kafka-0.8.2.1.tbz2
 BuildRoot: %{_tmppath}/%{name}-root
 BuildArch: noarch
 AutoReqProv: no
@@ -76,7 +76,7 @@ if [ "$1" = "0" ]; then
 fi
 
 %changelog
-* Thu May 14 2015 Cleber Rodrigues <cleber@cleberar.com> 0.8.2.1-0.2
+* Thu May 14 2015 Cleber Rodrigues <cleber@cleberar.com> 0.8.2.1-1.1
 - update default config
 
 * Sun Apr 26 2015 Cleber Rodrigues <cleber@cleberar.com> 0.8.2.1-0.1
